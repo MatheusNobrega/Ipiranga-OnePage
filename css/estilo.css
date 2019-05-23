@@ -28,3 +28,16 @@ nav{
     color:#ed1f26 !important ;
     font-weight: bold;
 }
+.coresImportantes{
+    color: white !important;
+    background-color: black !important;
+}
+.risco{
+    border-top:solid 0.1px !important;
+    border-color: white !important;
+}
+
+.bot{
+    border:solid 0.1px !important;
+    border-color: white !important;
+}
