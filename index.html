@@ -30,17 +30,23 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link active" href="index.html">Início
+              <a class="nav-link active" class="scroll" href="index.html">Início
                 <span class="sr-only">(atual)</span></a>
             </li> <!-- adicionar o IR PARA--> 
             <li class="nav-item">
-              <a class="nav-link" href="ofertas.html">Ofertas</a>
+              <a class="nav-link" class="scroll" href="#hortifrut">Hortfrut</a>
             </li>
             <li class="nav-item"> <!-- adicionar o IR PARA-->
-              <a class="nav-link" href="sobre.html">Sobre</a>
+              <a class="nav-link" class="scroll" href="#padaria">Padaria</a>
             </li>
             <li class="nav-item"> <!-- adicionar o IR PARA-->
-              <a class="nav-link" href="contato.html">Contato</a>
+              <a class="nav-link" class="scroll" href="#carnes">Carnes e Peixes</a>
+            </li>
+            <li class="nav-item"> <!-- adicionar o IR PARA-->
+              <a class="nav-link" class="scroll" href="#sobre">Sobre nós</a>
+            </li>
+            <li class="nav-item"> <!-- adicionar o IR PARA-->
+              <a class="nav-link" class="scroll" href="#contato">Fale Conosco</a>
             </li>
           </ul>
         </div>
@@ -56,7 +62,7 @@
         <h2 class="mt-2 mb-3 txt-oficial font-weight-bold text-center">CONFIRA NOSSAS OFERTAS</h2>
       </div>
     </div>
-    <div class="row">
+    <div id = "hortifrut" class="row">
       <div class="col-12">
         <h2 class="txt-oficial text-center font-weight-bold mb-2 mt-2">Hortifrut</h2>
       </div>
@@ -105,7 +111,7 @@
       </div>
     </div>
     <h2 class="txt-oficial text-center font-weight-bold mb-2 mt-2">Padaria</h2>
-    <div class="row mt-3 mb-3">
+    <div id = "padaria" class="row mt-3 mb-3">
       <div class=" col-6 col-md-6 col-lg-3 mt-2">
         <img class="img-fluid" src="img/ofertas/padaria/pd.jpg" alt="Imagem de um pão doce">
         <h5 class="txt-oficial text-center mt-2">Pão Doce</h5>
@@ -133,7 +139,7 @@
         <h2 class="txt-oficial text-center font-weight-bold mb-2 mt-2">Carnes e Peixes</h2>
       </div>
     </div>
-    <div class="row">
+    <div id = "carnes" class="row">
       <div class=" col-6 col-md-6 col-lg-3 mt-2 mb-2">
         <img class="img-fluid" src="img/ofertas/carnes/bacalhau.jpg" alt="imagem do peixe bacalhau">
         <h5 class="txt-oficial text-center mt-2">Bacalhau</h5>
@@ -212,7 +218,7 @@
         <h3 class="text-center txt-oficial font-weight-bold">Sobre Nós / Empresa</h3>
       </div>
 
-      <div class="col-12 mb-4 mt-2 text-justify">
+      <div id = "sobre" class="col-12 mb-4 mt-2 text-justify">
         <p> No ano de 1974 o casal Jose Aparecido Pariz Hernandes e Ana Maria Piacentin Hernandes chegam à Taquaritinga
           para trabalhar como trabalhadores rurais na Fazenda Rincão Novo em Taquaritinga SP, constituindo neste local
           sua família com os 2 filhos Elaine Cristiane Pariz Hernandes e Edson Fernando Pariz Hernandes. Com Este casal
@@ -264,7 +270,7 @@
         <h2 class="text-center txt-oficial font-weight-bold">Entre em contato conosco!</h2>
       </div>
       <form class="col-12 mx-auto">
-        <div class="row">
+        <div id = "contato" class="row">
           <div class="form-group col-12 col-lg-6">
             <label for="exampleFormControlSelect1">Departamento</label>
             <select class="form-control" id="exampleFormControlSelect1">
@@ -386,6 +392,7 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/funcao.js"></script>
+    <script src="js/app.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
       crossorigin="anonymous"></script>
