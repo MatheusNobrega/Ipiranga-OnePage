@@ -12,3 +12,8 @@ function bot() {
   $('button').
   addClass("bot")
 }
+
+function fonteG() {
+  $('p, h3, h4, h5, a, label, input, span, select, textarea')
+    .addClass("fonteG")
+}
