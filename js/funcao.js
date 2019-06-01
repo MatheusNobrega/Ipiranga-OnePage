@@ -14,6 +14,11 @@ function bot() {
 }
 
 function fonteG() {
-  $('p, h3, h4, h5, a, label, input, span, select, textarea')
+  $('p, h3, h4, h5, H6, a, label, input, span, select, textarea')
     .addClass("fonteG")
+}
+
+function fonteP() {
+  $('p, h3, h4, h5, H6, a, label, input, span, select, textarea')
+    .addClass("fonteP")
 }
