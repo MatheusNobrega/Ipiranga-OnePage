@@ -13,16 +13,6 @@ function bot() {
   addClass("bot")
 }
 
-function fonteG() {
-  $('p, h3, h4, h5, H6, a, label, input, span, select, textarea')
-    .addClass("fonteG")
-}
-
-function fonteP() {
-  $('p, h3, h4, h5, H6, a, label, input, span, select, textarea')
-    .addClass("fonteP")
-}
-
 //reference https://codepen.io/nicolas-justin/pen/jXQjQr?editors=1000
 
 // Toogle Click Math
@@ -114,4 +104,25 @@ $('#tPhone').blur(
       // }
       $('#tPhone').val(phoneNovo)
     }
+  });
+
+  $(document).ready((e) => {
+    function fonte(e) {
+      const elemento = $(".alterafonte");
+      const fonte = elemento.css('font-size');
+      if (e == 'a') {
+        elemento.css("fontSize", parseInt(fonte) + 3);
+      } else if ('d') {
+        elemento.css("fontSize", parseInt(fonte) - 3);
+      }
+    }
+  
+    $("#aumenta").click((e) => {
+      fonte('a');
+    });
+  
+    $("#diminui").click((e) => {
+      fonte('b');
+    });
+  
   });
