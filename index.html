@@ -280,7 +280,7 @@
           </div>
           <div class="col-12 col-lg-6">
             <label for="exampleFormControlSelect1">Telefone</label>
-            <input type="tel" id='tPhone' class="form-control" placeholder="XXXX-XXXX">
+            <input type="tel" id='tPhone' class="form-control" placeholder="XXXX-XXXX" maxlength="8">
           </div>
           <div class="form-group col-12 col-lg-6 mt-2">
             <label for="exampleFormControlTextarea1">Mensagem</label>
@@ -299,9 +299,8 @@
             <input type="text" id="calc" maxlength="2" placeholder="Resultado" onchange="calcMath()" required>
           </div>
         </div>
-        <!-- <div class="col-2"></div> -->
         <!-- Buttons -->		
-        <input id="btnSubmit" type="submit" value="Enviar" class="btn botão  mt-4 mb-3">
+        <input id="btnSubmit" type="submit" value="Enviar" class="btn botão  mt-4 mb-3" onclick="mandou()">
 
       <div class="container row mt-3 mb-3">
         <div class="col-12 col-md-12 col-lg-6 mt-2 mb-1">

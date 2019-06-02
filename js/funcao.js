@@ -72,17 +72,18 @@ function calcMath() {
 }
 
 // Disabled button sign in
+
 var btnSI = document.getElementById('btnSubmit');
 
 function btnDisabled() {
   if (calc.value == '') {
     btnSI.setAttribute('disabled', 'disabled');
-
   } else {
     btnSI.setAttribute('disabled', 'none');
     btnSI.style.backgroundColor = "#f00"
   }
 }
+
 
 $('#btnSubmit').click(
   function () {
@@ -93,8 +94,8 @@ $('#btnSubmit').click(
       "Mensagem": $("#tMessage").val(),
     }
     let html = JSON.stringify(contato);
-    // $('#formatoPedido').text(html);
     console.log(contato)
+    alert('Obrigado! Sua mensagem foi enviada')
     return false;
   })
 
