@@ -83,3 +83,17 @@ function btnDisabled() {
     btnSI.style.backgroundColor = "#f00"
   }
 }
+
+$('#btnSubmit').click(
+  function () {
+    let contato = {
+      "Nome Completo": $("#tName").val(),
+      "Email": $("#tEmail").val(),
+      "Telefone": $("#tPhone").val(),
+      "Mensagem": $("#tMessage").val(),
+    }
+    let html = JSON.stringify(contato);
+    // $('#formatoPedido').text(html);
+    console.log(contato)
+    return false;
+  })

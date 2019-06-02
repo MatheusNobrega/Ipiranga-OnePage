@@ -14,7 +14,7 @@
   <title>Ipiranga Supermercado</title>
 </head>
 
-<body>
+<body onload="btnDisabled()">
   <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
       <div class="container">
@@ -267,23 +267,23 @@
       <div class="col-12">
         <h2 class="text-center txt-oficial font-weight-bold">Entre em contato conosco!</h2>
       </div>
-      <form class="col-12 mx-auto">
+      <form id="contato" class="col-12 mx-auto">
         <div id = "contato" class="row">
           <div class="col-12 col-lg-6">
-            <label for="exampleFormControlSelect1">E-mail</label>
-            <input type="email" class="form-control" placeholder="Digite seu email">
+            <label for="exampleFormControlSelect1">Nome Completo</label>
+            <input type="text" id='tName' class="form-control" placeholder="Digite seu nome">
           </div>
           <div class="col-12 col-lg-6">
-            <label for="exampleFormControlSelect1">Nome Completo</label>
-            <input type="text" class="form-control" placeholder="Digite seu nome">
+            <label for="exampleFormControlSelect1">E-mail</label>
+            <input type="email" id='tEmail' class="form-control" placeholder="Digite seu email">
           </div>
           <div class="col-12 col-lg-6">
             <label for="exampleFormControlSelect1">Telefone</label>
-            <input type="tel" class="form-control" placeholder="(XX) XXXXX-XXX">
+            <input type="tel" id='tPhone' class="form-control" placeholder="(XX) XXXXX-XXX">
           </div>
           <div class="form-group col-12 col-lg-6 mt-2">
             <label for="exampleFormControlTextarea1">Mensagem</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <textarea class="form-control" id='tMessage' id="exampleFormControlTextarea1" rows="3"></textarea>
           </div>
         </div>
       </form>
