@@ -2,18 +2,19 @@
 <html lang="pt-br">
 
 <head>
-  <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" href="css/estilo.css">
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous" />
+
   <title>Ipiranga Supermercado</title>
 </head>
 
-<body>
+<body onload="btnDisabled()">
   <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
       <div class="container">
@@ -36,7 +37,6 @@
               <button onclick="contraste(),risco(),bot()" type="submit"
                 class="botão btn btn-primary mb-1 mt-1 mr-3">Contraste</button>
             </li>
-
             <li class="nav-item">
               <a class="nav-link active" class="scroll" href="index.html">Início
                 <span class="sr-only">(atual)</span></a>
@@ -61,9 +61,10 @@
       </div>
     </nav>
   </header>
-  <main class="container mt-4">
-    <div class=" col-12 col-md-12 col-lg-12 mb-2">
-      <img class="img-fluid" src="img/banners/b2.jpg" alt="oferta promocional ">
+
+  <section class="container mt-5">
+    <div class=" col-12 col-md-12 col-lg-12 mt-2 mb-2">
+      <img class="mt-5 img-fluid" src="img/banners/b2.jpg" alt="oferta promocional ">
     </div>
     <div class="row">
       <div class="col-12">
@@ -115,7 +116,6 @@
         <img class="img-fluid" src="img/ofertas/hortifrut/tomate.jpg" alt="Imagem do vegetal Tomate">
         <h5 class="txt-oficial text-center mt-2">Tomate</h5>
         <p class=" text-center mt-2">R$5.99/kg</p>
-
       </div>
     </div>
     <h2 class="txt-oficial text-center font-weight-bold mb-2 mt-2">Padaria</h2>
@@ -141,7 +141,6 @@
         <p class=" text-center mt-2">R$7.99/kg</p>
       </div>
     </div>
-
     <div class="row">
       <div class="col-12">
         <h2 class="txt-oficial text-center font-weight-bold mb-2 mt-2">Carnes e Peixes</h2>
@@ -209,19 +208,11 @@
         <p class=" text-center mt-2">R$8.99/kg</p>
       </div>
     </div>
-  </main>
+  </section>
 
-
-
-
-
-
-  <!--///////////////////////////Sobre/////////////////////////-->
-
-
-
-  <main class="container">
-    <div class="row mb-2">
+  <!--Sobre-->
+  <section class="container">
+    <div class="row mt-5 mb-2">
       <div class="col-12 mb-4 mt-5">
         <h3 class="text-center txt-oficial font-weight-bold">Sobre Nós / Empresa</h3>
       </div>
@@ -267,46 +258,49 @@
         </div>
       </div>
     </div>
-  </main>
+  </section>
   <br>
 
-  <!--///////////////////////////////Contato///////////////////////////////////////////////-->
-
-  <main class="container">
+  <!--Contato-->
+  <section class="container">
     <div class="row">
       <div class="col-12">
         <h2 class="text-center txt-oficial font-weight-bold">Entre em contato conosco!</h2>
       </div>
-      <form class="col-12 mx-auto">
+      <form id="contato" class="col-12 mx-auto">
         <div id = "contato" class="row">
-          <div class="form-group col-12 col-lg-6">
-            <label for="exampleFormControlSelect1">Departamento</label>
-            <select class="form-control" id="exampleFormControlSelect1">
-              <option>Escolha um departamento</option>
-              <option>Financeiro</option>
-              <option>Comercial</option>
-            </select>
+          <div class="col-12 col-lg-6">
+            <label for="exampleFormControlSelect1">Nome Completo</label>
+            <input type="text" id='tName' class="form-control" placeholder="Digite seu nome">
           </div>
           <div class="col-12 col-lg-6">
             <label for="exampleFormControlSelect1">E-mail</label>
-            <input type="email" class="form-control" placeholder="Digite seu email">
-          </div>
-          <div class="col-12 col-lg-6">
-            <label for="exampleFormControlSelect1">Nome Completo</label>
-            <input type="text" class="form-control" placeholder="Digite seu nome">
+            <input type="email" id='tEmail' class="form-control" placeholder="Digite seu email">
           </div>
           <div class="col-12 col-lg-6">
             <label for="exampleFormControlSelect1">Telefone</label>
-            <input type="tel" class="form-control" placeholder="(XX) XXXXX-XXX">
+            <input type="tel" id='tPhone' class="form-control" placeholder="(XX) XXXXX-XXX">
+          </div>
+          <div class="form-group col-12 col-lg-6 mt-2">
+            <label for="exampleFormControlTextarea1">Mensagem</label>
+            <textarea class="form-control" id='tMessage' id="exampleFormControlTextarea1" rows="3"></textarea>
           </div>
         </div>
-        <div class="form-group col-12 col-lg-12 mt-2">
-          <label for="exampleFormControlTextarea1">Mensagem</label>
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-        </div>
       </form>
-      <button type="submit" class="botão btn btn-primary col-3 col-md-1 col-lg-1 mx-auto mt-4 mb-3">Enviar</button>
 
+      <!-- Captcha -->
+        <div class="field captcha col-6 mr-3">
+          <span id="toggle" value="0">
+            <i id="toggleIcon" class="fas fa-toggle-on toggle-off"></i>
+          </span>
+          <p><label id="math" for="calc"></label></p>
+          <div class="option">
+            <input type="text" id="calc" maxlength="2" placeholder="Resultado" onchange="calcMath()" required>
+          </div>
+        </div>
+        <!-- <div class="col-2"></div> -->
+        <!-- Buttons -->		
+        <input id="btnSubmit" type="submit" value="Enviar" class="btn botão  mt-4 mb-3">
 
       <div class="container row mt-3 mb-3">
         <div class="col-12 col-md-12 col-lg-6 mt-2 mb-1">
@@ -330,21 +324,8 @@
           </div>
         </div>
       </div>
-
     </div>
-  </main>
-
-
-
-  <!--////////////////////////////////////////Rodapé/////////////////////////////////////////-->
-
-
-
-
-
-
-
-
+  </section>
 
   <footer class="footer bg-oficial text-white">
     <div class="container">
@@ -360,12 +341,8 @@
         </div>
         <div class="col-12 col-md-4 col-md-4">
           <div class="row mt-3">
-            <!-- <div class="col-12">
-                  <h5 class="text-white"><strong>Formas de Pagamento </strong></h5>
-                  <p>Dinheiro |
-                    Débito |
-                    Crédito</p>
-                </div> -->
+            
+      
             <div class="col-12 mb-2">
               <h5><strong>Nossas Redes Sociais</strong></h5>
             </div>
