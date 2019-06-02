@@ -13,8 +13,18 @@ function bot() {
   addClass("bot")
 }
 
+function fonteG() {
+  $('p, h3, h4, h5, H6, a, label, input, span, select, textarea')
+    .addClass("fonteG")
+}
+
+function fonteP() {
+  $('p, h3, h4, h5, H6, a, label, input, span, select, textarea')
+    .addClass("fonteP")
+}
 
 //reference https://codepen.io/nicolas-justin/pen/jXQjQr?editors=1000
+
 // Toogle Click Math
 var toggle = document.getElementById('toggle');
 var toggleIcon = document.getElementById('toggleIcon');
@@ -33,6 +43,7 @@ function toggleFunction() {
     v2 = Math.floor(Math.random() * 10);
     result = v1 + v2;
     math.innerHTML = v1 + ' + ' + v2;
+    //alert(v1 + ' + ' + v2 + ' = ' + result);
     toggleIcon.setAttribute('class', 'fas fa-toggle-on toggle-off');
     toggle.style.opacity = ('.3');
     toggle.value = 0;
@@ -42,6 +53,7 @@ function toggleFunction() {
     var v2 = Math.floor(Math.random() * 10);
     result = v1 * v2;
     math.innerHTML = v1 + ' * ' + v2;
+    //alert(v1 + ' * ' + v2 + ' = ' + result);
     toggleIcon.setAttribute('class', 'fas fa-toggle-on toggle-on');
     toggle.style.opacity = ('1');
     toggle.value = 1;
@@ -55,15 +67,19 @@ function calcMath() {
   } else {
     btnSI.setAttribute('disabled', 'disabled');
     calc.style.borderColor = "#f00";
+    alert('Valor incorreto');
   }
 }
+
 // Disabled button sign in
-var btnSI = document.getElementById('btnSignIn');
+var btnSI = document.getElementById('btnSubmit');
 
 function btnDisabled() {
   if (calc.value == '') {
     btnSI.setAttribute('disabled', 'disabled');
+
   } else {
     btnSI.setAttribute('disabled', 'none');
+    btnSI.style.backgroundColor = "#f00"
   }
 }
