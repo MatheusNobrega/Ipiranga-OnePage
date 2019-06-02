@@ -97,3 +97,20 @@ $('#btnSubmit').click(
     console.log(contato)
     return false;
   })
+
+
+$('#tPhone').blur(
+  function () {
+    let phone = $('#tPhone').val();
+    let phoneNovo = ''
+    for (let x = 0; x <= phone.length; x++) {
+      phoneNovo += phone.charAt(x);
+      if (x == 3) {
+        phoneNovo += '-'
+      }
+      // else if (x == 8) {
+      //   phoneNovo += '-'
+      // }
+      $('#tPhone').val(phoneNovo)
+    }
+  });
